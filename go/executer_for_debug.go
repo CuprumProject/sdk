@@ -101,7 +101,24 @@ func main() {
     if eDecl != nil {
     os.Exit(1)
   }
-
+  
+  // Parse cycle:
+  //
+  // progress = readOperator
+  // +----------------+
+  // |                |
+  // |  readOperator  |
+  // |                |
+  // +----------------+
+  // contents[i] = 0x01 (Move) || 
+  // contents[i] = 0x06 (Int)
+  //          |
+  //          V
+  // +------------------+
+  // |                  |
+  // |  
+  
+  
   for {
     
     switch progress {
