@@ -18,7 +18,7 @@ using CommandLine::GetValueFromOption;
 using fsys::CreateSingleFileTrace;
 using fsys::File;
 
-int DetermineTargetAndCompile(const char*);
+int TargeteTargetAndCompile(const char*);
 
 int main(int argc, char* argv[]) {
   std::unique_ptr<const char*> compileObject = (
@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
   return DetermineTargetAndCompile(*compileObject);
 }
 
-int DetermineTargetAndCompile(const char* compileObjectFileName) {
+int TargetTargetAndCompile(const char* compileObjectFileName) {
   File compileObjectFile = CreateSingleFileTrace(compileObjectFileName);
   File textout = CreateSingleFileTrace("t.da");
   
