@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  return DetermineTargetAndCompile(*compileObject);
+  return TargetTargetAndCompile(*compileObject);
 }
 
 int TargetTargetAndCompile(const char* compileObjectFileName) {
