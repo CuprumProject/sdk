@@ -110,13 +110,21 @@ func main() {
   // |  readOperator  |
   // |                |
   // +----------------+
-  // contents[i] = 0x01 (Move) || 
-  // contents[i] = 0x06 (Int)
-  //          |
-  //          V
-  // +------------------+
-  // |                  |
-  // |  
+  // contents[i] = 0x01 (Move)  |  contents[i] = 0x06 (Int)
+  //          |                             |
+  //          |                             |
+  //          V                             V
+  // +------------------+         +-------------------+
+  // |                  |         |                   |
+  // |   readRegister   |         | interrputOperator |
+  // |                  |         |                   |
+  // +------------------+         +-------------------+
+  //                             contents[i] = 0x31 (Move) ||
+  //                           　contents[i] = 0x32 (Round)     
+  //                                         
+  //                                         
+  //                                         
+  //                              
   
   
   for {
